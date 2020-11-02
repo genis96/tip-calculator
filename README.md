@@ -1,1 +1,3 @@
 # tip-calculator
+
+in js
