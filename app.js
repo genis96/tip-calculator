@@ -1,15 +1,18 @@
-const form = document.querySelector('#form').onchange = () => {
+let form = document.querySelector('#form').onchange = () => {
     let billAmt = document.querySelector('#bill-amt').value;
     let percentage = document.querySelector('#choose-percentage').value;
     let tipAmt = document.querySelector('#tip-amt');
     let totalBill = document.querySelector('#total-bill');
 
     if(billAmt === '' || percentage === 0) {
-        alert('Required: Enter Value');
+        alert('Required: Enter Value'); 
         return;
     }
 
-    tipAmt = billAm / percentage;
+    tipAmt = billAmt / percentage;
+    console.log(tipAmt); //5.5
+
+   //now work on displaying the inputed amount inside the tip amt box 
 
 }
 
@@ -24,7 +27,7 @@ const form = document.querySelector('#form').onchange = () => {
  - The number you input inside billAmt must link to the percentage chosen through the <option> value tags in html. It must collect the input inside this input tag. 
  - REQUIRED to enter number or else send alert
  - It must also do math: billAmt number * percentage = tipAmt 
- - the total math score must then link and display to the tipAmt 
+ - the total tipAmt score must then link and display to the tipAmt input
  - The tipAmt must now be added to the billAmt to equal totalBill 
  - the math: billAmt + tipAmt = totalBill and it must display in the totalBill input. 
 
