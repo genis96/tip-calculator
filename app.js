@@ -1,19 +1,15 @@
 let form = document.querySelector('#form').onchange = () => {
     let billAmt = document.querySelector('#bill-amt').value;
     let percentage = document.querySelector('#choose-percentage').value;
-    let tipAmt = document.querySelector('#tip-amt');
+    let tipAmt = document.querySelector('#tip-amt').innerHTML;
     let totalBill = document.querySelector('#total-bill');
 
     if(billAmt === '' || percentage === 0) {
         alert('Required: Enter Value'); 
         return;
     }
-
-    tipAmt = billAmt / percentage;
-    console.log(tipAmt); //5.5
-
-   //now work on displaying the inputed amount inside the tip amt box 
-
+    tipAmt = billAmt * (percentage/100);
+    console.log(tipAmt); 
 }
 
 
