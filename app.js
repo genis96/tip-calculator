@@ -4,21 +4,25 @@ let form = document.querySelector('#form').onchange = () => {
     let tipAmt = Number(document.querySelector('#tip-amt').innerHTML);
     let totalBill = Number(document.querySelector('#total-bill').value);
     
-    function writeInputs() {
-    // document.getElementById('results').style.display='block'
+    // function writeInputs() {
+    // // document.getElementById('results').style.display='block'
 
-    }
+    // }
 
     if(billAmt === '' || percentage === 0) {
         alert('Required: Enter Value'); 
         return;
     }
     tipAmt = billAmt * (percentage/100);
-    totalBill = (tipAmt + billAmt).display='block';
-
+    totalBill = (tipAmt + billAmt);
+    // totalBill = (tipAmt + billAmt).display='block';
+    
     
     console.log(billAmt + tipAmt); 
     console.log(tipAmt); 
+
+    // document.getElementsByClassName('results').style.display='block';
+
 }
 
 
