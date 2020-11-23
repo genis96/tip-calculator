@@ -6,14 +6,6 @@ let form = document.querySelector('#form').onchange = () => {
     
     function writeInputs() {
     // document.getElementById('results').style.display='block'
-    // tipAmt = billAmt * (percentage/100);
-    // totalBill = (tipAmt + billAmt);
-    // let bill = Number(document.querySelector('#bill-amt').value);
-    let tip = billAmt * (percentage/100);
-    let total = tip + billAmt;
-
-    tipAmt.textContent = "$"+(tip).toFixed(2);
-    totalBill.textContent = "$"+(total).toFixed(2);
 
     }
 
@@ -21,12 +13,12 @@ let form = document.querySelector('#form').onchange = () => {
         alert('Required: Enter Value'); 
         return;
     }
+    tipAmt = billAmt * (percentage/100);
+    totalBill = (tipAmt + billAmt).display='block';
 
-    writeInputs();
-    console.log(billAmt + tip);
-    console.log(tip);
-    // console.log(billAmt + tipAmt); 
-    // console.log(tipAmt); 
+    
+    console.log(billAmt + tipAmt); 
+    console.log(tipAmt); 
 }
 
 
