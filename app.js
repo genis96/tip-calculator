@@ -1,17 +1,18 @@
 let form = document.querySelector('#form').onchange = () => {
-    let billAmt = document.querySelector('#bill-amt').value;
+    let billAmt = Number(document.querySelector('#bill-amt').value);
     let percentage = document.querySelector('#choose-percentage').value;
-    let tipAmt = document.querySelector('#tip-amt').innerHTML;
-    let totalBill = document.querySelector('#total-bill');
+    let tipAmt = Number(document.querySelector('#tip-amt').value);
+    let totalBill = Number(document.querySelector('#total-bill'.value));
 
     if(billAmt === '' || percentage === 0) {
         alert('Required: Enter Value'); 
         return;
     }
     tipAmt = billAmt * (percentage/100);
+    totalBill = (tipAmt + billAmt);
+    console.log(billAmt + tipAmt); 
     console.log(tipAmt); 
 }
-
 
 
 
